@@ -1,8 +1,8 @@
 " Line numbers and tabs
 set number
-set tabstop=2
+set tabstop=4
 set softtabstop=0 noexpandtab
-set shiftwidth=2
+set shiftwidth=4
 
 " Syntax highlighting
 syntax enable
@@ -19,7 +19,6 @@ filetype plugin indent on
 " Plugins
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized' 
-
 
 " Hot keys
 map <silent> <C-h> :call WinMove('h')<cr>
