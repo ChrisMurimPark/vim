@@ -1,8 +1,27 @@
+" Leader
+:let mapleader=' '
+
 " Line numbers and tabs
 set number
 set tabstop=4
-set softtabstop=0 noexpandtab
+set softtabstop=4
 set shiftwidth=4
+
+" Ensure PEP8 standard
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Full stack config tab
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
 
 " Syntax highlighting
 syntax enable
@@ -47,6 +66,7 @@ endfunction
 function! LineNumberToggle()
 	if (&relativenumber == 1)
 		set norelativenumber
+		set number
 	else
 		set relativenumber
 	endif
