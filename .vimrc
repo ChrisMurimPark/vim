@@ -2,20 +2,10 @@
 :let mapleader=' '
 
 " Line numbers and tabs
-set number
+set relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-" Ensure PEP8 standard
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
 
 " Full stack config tab
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -38,12 +28,15 @@ filetype plugin indent on
 " Plugins
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized' 
+Bundle 'scrooloose/nerdtree'
+call vundle#end()
 
 " Hot keys
 map <silent> <C-h> :call WinMove('h')<cr>
 map <silent> <C-j> :call WinMove('j')<cr>
 map <silent> <C-k> :call WinMove('k')<cr>
 map <silent> <C-l> :call WinMove('l')<cr>
+map <leader>nt :NERDTreeToggle<cr>
 nnoremap <C-n> :call LineNumberToggle()<cr>
 
 """"""" FUNCTIONS
