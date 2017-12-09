@@ -15,7 +15,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
 " Syntax highlighting
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme monokai
 
 call plug#begin('~/.vim/plugged')
 " Plugins
