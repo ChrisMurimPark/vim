@@ -2,7 +2,6 @@
 :let mapleader=' '
 
 " Line numbers and tabs
-set relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -18,18 +17,14 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" Configuring Vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-filetype plugin indent on
-
+call plug#begin('~/.vim/plugged')
 " Plugins
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized' 
-Bundle 'scrooloose/nerdtree'
-call vundle#end()
+Plug 'altercation/vim-colors-solarized' 
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+call plug#end()
 
 " Hot keys
 map <silent> <C-h> :call WinMove('h')<cr>
