@@ -59,5 +59,3 @@ function! LineNumberToggle()
 		set relativenumber
 	endif
 endfunc
-
-" End
