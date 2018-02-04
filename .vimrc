@@ -60,3 +60,4 @@ function! LineNumberToggle()
 	endif
 endfunc
 
+" End
